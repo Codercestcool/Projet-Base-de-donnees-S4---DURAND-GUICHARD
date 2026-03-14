@@ -160,3 +160,53 @@ Avoir_pour_couleur = (#p_numero_pokedex, #c_id);
 Posséder = (#p_numero_pokedex, #f_id);
 
 Se_passer = (#r_id, #(#g_num, j_id));
+
+
+
+**Interrogation de la BdD**
+Scénario :
+
+Rôle : Un joueur de Pokémon qui fait des challenges sur tous les jeux
+Objectif : Son challenge lui requiert de faire le jeu sous des conditions très spécifiques. Il a donc besoin d'extraire des données pour savoir comment remplir ces conditions.
+
+* Liste des données à extraire pour ses challenges :
+
+* Lister les Pokémon dont le nom français commence par 'P' ou 'M', triés par numéro.
+
+* Trouver les Pokémon dont le poids est entre 50kg et 150kg, excluant les légendaires.
+
+* Sélectionner les Pokémon de la 1ère, 3ème ou 5ème génération.
+
+* Afficher les types uniques (sans doublons) présents dans la base.
+
+* Lister les Pokémon avec un taux de capture faible (inférieur à 50) et une taille > 2m.
+
+* Nombre de Pokémon par type, pour les types en ayant plus de 5 en base.
+
+* Poids moyen des Pokémon par région.
+
+* Taille maximale atteinte par un Pokémon non-légendaire par génération.
+
+* Somme totale des taux de capture par couleur de Pokémon.
+
+* Nombre de jeux sortis par génération ayant plus de 2 jeux enregistrés.
+
+* Afficher le nom du Pokémon avec le nom de sa région et de sa génération (Jointure multiple).
+
+* Lister tous les types et les Pokémon associés (même si certains types n'ont pas de Pokémon).
+
+* Trouver les Pokémon et leurs conditions d'évolution (Auto-jointure via Evoluer).
+
+* Lister les jeux et les régions où ils se passent (Jointure sur clé composée).
+
+* Afficher les Pokémon, leur groupe d'oeuf et leur couleur principale.
+
+* Sélectionner les Pokémon qui ne possèdent aucune forme spécial
+
+* Trouver les Pokémon qui appartiennent à un groupe d'oeuf contenant le mot 'Dragon'.
+
+* Trouver les Pokémon dont le poids est supérieur à TOUS les Pokémon de la génération 1.
+
+* Somme totale des taux de capture par couleur de Pokémon.
+
+* Sélectionner les noms des régions qui accueillent des jeux de la génération 9 (IN imbriqué). 
