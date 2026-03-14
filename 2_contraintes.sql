@@ -1,4 +1,4 @@
-USE projet;
+USE projet_durand_guichard;
 
 -- Contraintes Type
 ALTER TABLE Type
