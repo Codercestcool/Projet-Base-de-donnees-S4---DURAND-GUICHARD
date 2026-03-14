@@ -29,7 +29,7 @@ CHECK (j_nom <> '');
 
 ALTER TABLE Jeu
 ADD CONSTRAINT chk_jeu_year_release_min
-CHECK (j_date_de_sortie >= ’1996-02-27’);
+CHECK (j_date_sortie >= '1996-02-27');
 
 -- Contraintes Groupe d'oeufs
 ALTER TABLE Groupe_Oeuf
