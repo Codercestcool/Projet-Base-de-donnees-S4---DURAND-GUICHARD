@@ -64,7 +64,6 @@ CREATE TABLE Forme(
    p_numero_pokedex INT,
    f_id INT,
    f_nom VARCHAR(50),
-   f_type_forme VARCHAR(50),
    f_description_forme VARCHAR(50),
    PRIMARY KEY(r_id, g_num, p_numero_pokedex, f_id),
    FOREIGN KEY(r_id, g_num, p_numero_pokedex) REFERENCES Pokémon(r_id, g_num, p_numero_pokedex)
