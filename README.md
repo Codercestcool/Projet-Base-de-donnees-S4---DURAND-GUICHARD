@@ -132,16 +132,31 @@ Le MLD du projet :
 
 
 Type = (t_id INT, t_nom VARCHAR(50));
+
 Génération = (g_num INT, g_nom VARCHAR(30));
+
 Région = (r_id INT, r_nom VARCHAR(30));
+
 Jeu = (#g_num, j_id INT, j_nom VARCHAR(60), j_date_sortie DATE);
+
 Groupe_Oeuf = (go_id INT, go_nom VARCHAR(20));
+
 Couleur = (c_id INT, c_nom VARCHAR(50));
-Pokémon = (#r_id, #g_num, p_numero_pokedex INT, p_nom_francais VARCHAR(50), p_nom_anglais VARCHAR(50), p_taille_metre DECIMAL(5,2), p_poids_kilo DECIMAL(6,1), p_taux_capture INT, p_legendaire LOGICAL, p_fabuleux LOGICAL, p_reproduction LOGICAL, p_description VARCHAR(255));
-Forme = (#(#r_id, #g_num, p_numero_pokedex), f_id INT, f_nom VARCHAR(50), f_description_forme VARCHAR(50));
-Etre = (#(#r_id, #g_num, p_numero_pokedex), #(t_id, t_nom));
-Avoir_pour = (#(#r_id, #g_num, p_numero_pokedex), #go_id);
-Apparaitre_dans = (#(#r_id, #g_num, p_numero_pokedex), #(#g_num_1, j_id));
-Evoluer = (#(#r_id, #g_num, p_numero_pokedex), #(#r_id_1, #g_num_1, p_numero_pokedex_1), Niveau_minimal VARCHAR(50), Condition_spéciale VARCHAR(50));
-Avoir_pour_couleur = (#(#r_id, #g_num, p_numero_pokedex), #c_id);
+
+Forme = (f_id INT, f_nom VARCHAR(50), f_description_forme VARCHAR(50));
+
+Pokémon = (p_numero_pokedex INT, p_nom_francais VARCHAR(50), p_nom_anglais VARCHAR(50), p_taille_metre DECIMAL(5,2), p_poids_kilo DECIMAL(6,1), p_taux_capture INT, p_legendaire LOGICAL, p_fabuleux LOGICAL, p_reproduction LOGICAL, p_description VARCHAR(255), #r_id, #g_num);
+
+Etre = (#p_numero_pokedex, #(t_id, t_nom));
+
+Avoir_pour = (#p_numero_pokedex, #go_id);
+
+Apparaitre_dans = (#p_numero_pokedex, #(#g_num, j_id));
+
+Evoluer = (#p_numero_pokedex, #p_numero_pokedex_1, Niveau_minimal VARCHAR(50), Condition_spéciale VARCHAR(50));
+
+Avoir_pour_couleur = (#p_numero_pokedex, #c_id);
+
+Posséder = (#p_numero_pokedex, #f_id);
+
 Se_passer = (#r_id, #(#g_num, j_id));
