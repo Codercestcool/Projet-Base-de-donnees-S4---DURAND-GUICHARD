@@ -120,7 +120,16 @@ Ce document constitue la **base d’analyse fonctionnelle** permettant à l’é
 
 * le **MCD (Modèle Conceptuel de Données)**
 
-* **MLD**
+* le **MLD (Modèle Logique de Données)**
+
+* puis l’implémentation physique de la base de données.
+
+Si tu le souhaites, je peux également produire le **MCD textuel conforme à MERISE** à partir de ces éléments.
+
+
+
+Le MLD du projet :
+
 
 Type = (t_id INT, t_nom VARCHAR(50));
 Génération = (g_num INT, g_nom VARCHAR(30));
@@ -136,7 +145,3 @@ Apparaitre_dans = (#(#r_id, #g_num, p_numero_pokedex), #(#g_num_1, j_id));
 Evoluer = (#(#r_id, #g_num, p_numero_pokedex), #(#r_id_1, #g_num_1, p_numero_pokedex_1), Niveau_minimal VARCHAR(50), Condition_spéciale VARCHAR(50));
 Avoir_pour_couleur = (#(#r_id, #g_num, p_numero_pokedex), #c_id);
 Se_passer = (#r_id, #(#g_num, j_id));
-
-* puis l’implémentation physique de la base de données.
-
-Si tu le souhaites, je peux également produire le **MCD textuel conforme à MERISE** à partir de ces éléments.
