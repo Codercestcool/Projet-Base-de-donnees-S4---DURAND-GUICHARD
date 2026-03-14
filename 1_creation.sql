@@ -1,10 +1,10 @@
-CREATE DATABASE IF NOT EXISTS projet_durand_guichard;
-USE projet_durand_guichard;
+CREATE DATABASE IF NOT EXISTS projet_poke_durand_guichard;
+USE projet_poke_durand_guichard;
 
 CREATE TABLE Type(
    t_id INT,
    t_nom VARCHAR(50),
-   PRIMARY KEY(t_id, t_nom)
+   PRIMARY KEY(t_id)
 );
 
 CREATE TABLE Génération(
@@ -68,10 +68,9 @@ CREATE TABLE Pokémon(
 CREATE TABLE Etre(
    p_numero_pokedex INT,
    t_id INT,
-   t_nom VARCHAR(50),
-   PRIMARY KEY(p_numero_pokedex, t_id, t_nom),
+   PRIMARY KEY(p_numero_pokedex, t_id),
    FOREIGN KEY(p_numero_pokedex) REFERENCES Pokémon(p_numero_pokedex),
-   FOREIGN KEY(t_id, t_nom) REFERENCES Type(t_id, t_nom)
+   FOREIGN KEY(t_id) REFERENCES Type(t_id)
 );
 
 CREATE TABLE Avoir_pour(
