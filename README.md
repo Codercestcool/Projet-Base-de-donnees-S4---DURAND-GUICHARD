@@ -120,6 +120,7 @@ Ce document constitue la **base d’analyse fonctionnelle** permettant à l’é
 
 * le **MCD (Modèle Conceptuel de Données)**
 
+**MLD**
 Type = (t_id INT, t_nom VARCHAR(50));
 Génération = (g_num INT, g_nom VARCHAR(30));
 Région = (r_id INT, r_nom VARCHAR(30));
